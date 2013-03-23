@@ -7,7 +7,7 @@
     <param name="frame" type="string" value="wide_stereo" />
     <param name="left/device" type="string" value="/dev/video1" />
     <param name="right/device" type="string" value="/dev/video2" />
-    <!--<param name="left/camera_info_url" type="string" value="file://$(find my_stereo_cam)/example-left.yaml" />
-    <param name="right/camera_info_url" type="string" value="file://$(find my_stereo_cam)/example-right.yaml" />-->
+    <param name="left/camera_info_url" type="string" value="file://$(find my_stereo_cam)/calib/large_in2/left.yaml" />
+    <param name="right/camera_info_url" type="string" value="file://$(find my_stereo_cam)/calib/large_in2/right.yaml" />
   </node>
 </launch>

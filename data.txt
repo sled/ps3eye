@@ -1,0 +1,62 @@
+bgr3: setting format to 861030210
+
+Device Node Path: /dev/video2
+  VID/PID: 1415 2000
+  OmniVision Technologies, Inc.
+  USB Camera-B4.09.24.1
+  serial: (null)
+Init. USB Camera-B4.09.24.1 (location: usb-0000:05:00.0-1)
+{ pixelformat = 'YUYV', description = 'YUYV' }
+{ discrete: width = 320, height = 240 }
+	Time interval between frame: 1/125, 1/100, 1/75, 1/60, 1/50, 1/40, 1/30, 
+{ discrete: width = 640, height = 480 }
+	Time interval between frame: 1/60, 1/50, 1/40, 1/30, 1/15, 
+{ pixelformat = 'RGB3', description = 'RGB3' }
+{ discrete: width = 320, height = 240 }
+	Time interval between frame: 1/125, 1/100, 1/75, 1/60, 1/50, 1/40, 1/30, 
+{ discrete: width = 640, height = 480 }
+	Time interval between frame: 1/60, 1/50, 1/40, 1/30, 1/15, 
+{ pixelformat = 'BGR3', description = 'BGR3' }
+{ discrete: width = 320, height = 240 }
+	Time interval between frame: 1/125, 1/100, 1/75, 1/60, 1/50, 1/40, 1/30, 
+{ discrete: width = 640, height = 480 }
+	Time interval between frame: 1/60, 1/50, 1/40, 1/30, 1/15, 
+{ pixelformat = 'YU12', description = 'YU12' }
+{ discrete: width = 320, height = 240 }
+	Time interval between frame: 1/125, 1/100, 1/75, 1/60, 1/50, 1/40, 1/30, 
+{ discrete: width = 640, height = 480 }
+	Time interval between frame: 1/60, 1/50, 1/40, 1/30, 1/15, 
+{ pixelformat = 'YV12', description = 'YV12' }
+{ discrete: width = 320, height = 240 }
+	Time interval between frame: 1/125, 1/100, 1/75, 1/60, 1/50, 1/40, 1/30, 
+{ discrete: width = 640, height = 480 }
+	Time interval between frame: 1/60, 1/50, 1/40, 1/30, 1/15, 
+vid:1415 
+pid:2000 
+driver:ov534
+checking format: 861030210
+fps is set to 1/125
+drawing controls
+
+VIDIOC_G_EXT_CTRLS failed
+   using VIDIOC_G_CTRL for user class controls
+control[0]: 0x980900  Brightness, 0:255:1, default 0 , current 0
+control[0]: 0x980901  Contrast, 0:255:1, default 32 , current 32
+control[0]: 0x980902  Saturation, 0:255:1, default 64 , current 64
+control[0]: 0x980903  Hue, -90:90:1, default 0 , current 0
+control[0]: 0x98090c  Auto White Balance, 0:1:1, default 1 , current 1
+control[0]: 0x980911  Exposure, 0:255:1, default 120 , current 120
+control[0]: 0x980912  Auto Gain, 0:1:1, default 1 , current 1
+control[0]: 0x980913  Main Gain, 0:63:1, default 20 , current 20
+control[0]: 0x980914  HFlip, 0:1:1, default 0 , current 0
+control[0]: 0x980915  VFlip, 0:1:1, default 0 , current 0
+control[0]: 0x980918  Light Frequency Filter, 0:1:1, default 0 , current 0
+adding menu entry 0: 0, Disabled
+adding menu entry 1: 1, 50 Hz
+control[0]: 0x98091b  Sharpness, 0:63:1, default 0 , current 0
+resolutions of format(3) = 2 
+frame rates of 1º resolution=7 
+fps is set to 1/125
+Def. Res: 0  numb. fps:7
+no codec detected for H264
+
