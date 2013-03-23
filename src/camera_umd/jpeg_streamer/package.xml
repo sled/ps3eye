@@ -1,0 +1,30 @@
+<package>
+  <name>jpeg_streamer</name>
+  <version>0.1.5</version>
+  <description>
+
+     tools for streaming JPEG-formatted CompressedImage topics over HTTP
+
+  </description>
+  <maintainer email="ktossell@umd.edu">Ken Tossell</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/jpeg_streamer</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>ros</build_depend> 
+  <build_depend>sensor_msgs</build_depend> 
+  <build_depend>roscpp</build_depend> 
+  <build_depend>image_transport</build_depend> 
+
+  <run_depend>sensor_msgs</run_depend> 
+  <run_depend>roscpp</run_depend> 
+  <run_depend>image_transport</run_depend> 
+  
+  <!-- <test_depend>sensor_msgs</test_depend> -->
+  <!-- <test_depend>roscpp</test_depend>  -->
+  <!-- <test_depend>image_transport</test_depend> -->
+
+</package>
+
+

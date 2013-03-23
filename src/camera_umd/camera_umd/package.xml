@@ -1,0 +1,32 @@
+<package>
+  <name>camera_umd</name>
+  <version>0.1.5</version>
+  <description>Software for USB cameras, stereo, streaming</description>
+  <maintainer email="ktossell@umd.edu">Ken Tossell</maintainer>
+
+  <license>GPL</license>
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/camera_umd</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <author email="ktossell@umd.edu">Ken Tossell</author>
+
+
+  <run_depend>uvc_camera</run_depend>
+  <run_depend>jpeg_streamer</run_depend>
+  <run_depend>uvc_stereo</run_depend>
+
+  <!-- <depend stack="common_msgs" /> --> <!-- sensor_msgs -->
+  <!-- <depend stack="driver_common" /> --> <!-- dynamic_reconfigure -->
+  <!-- <depend stack="image_common" /> --> <!-- camera_info_manager, image_transport -->
+  <!-- <depend stack="nodelet_core" /> --> <!-- nodelet -->
+  <!-- <depend stack="ros" /> -->
+  <!-- <depend stack="ros_comm" /> --> <!-- roscpp -->
+
+
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
