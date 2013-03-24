@@ -45,7 +45,8 @@ srv_gen/
 *.cfgc
 *.swp
 .rosinstall
-
+/rosbuild_ws/setup.sh
+/rosbuild_ws/setup.zsh
 # CMake Stuff #
 ###############
 CMakeFiles/
