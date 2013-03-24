@@ -1,0 +1,65 @@
+%{
+#include <ipc_bridge/msgs/roslib_Header.h>
+#include <ipc_bridge/msgs/geometry_msgs_Pose.h>
+%}
+
+ipc_type roslib_Header;
+ipc_type geometry_msgs_Pose;
+
+struct geometry_msgs_PoseArray
+{
+ roslib_Header header;
+ unsigned int poses_length;
+ geometry_msgs_Pose poses<>;
+
+%{
+  geometry_msgs_PoseArray() : poses_length(0), poses(0) {}
+  geometry_msgs_PoseArray(const geometry_msgs_PoseArray& msg) :
+    header(msg.header), poses_length(msg.poses_length)
+  {
+    if (poses != 0)
+      delete[] poses;
+  
+    poses = 0;
+    if (msg.poses_length > 0)
+      {
+        poses = new geometry_msgs_Pose[poses_length];
+        memcpy((void*)poses, (void*)msg.poses,
+               poses_length*sizeof(geometry_msgs_Pose));
+      }
+  }
+  ~geometry_msgs_PoseArray()
+  {
+    if (poses != 0)
+      delete[] poses;
+  }
+  geometry_msgs_PoseArray& operator= (const geometry_msgs_PoseArray& msg)
+  {
+    header = msg.header;
+    poses_length = msg.poses_length;
+    
+    if (poses != 0)
+      delete[] poses;
+  
+    poses = 0;
+    if (msg.poses_length > 0)
+      {
+        poses = new geometry_msgs_Pose[poses_length];
+        memcpy((void*)poses, (void*)msg.poses,
+               poses_length*sizeof(geometry_msgs_Pose));
+      }
+
+    return *this;
+  }
+%}
+};
+
+%{
+namespace ipc_bridge
+{
+    namespace geometry_msgs
+    {
+        typedef geometry_msgs_PoseArray PoseArray;
+    }
+}
+%}

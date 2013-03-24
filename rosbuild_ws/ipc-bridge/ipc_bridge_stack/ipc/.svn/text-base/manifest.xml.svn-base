@@ -1,0 +1,14 @@
+<package>
+  <description brief="CMU's ipc library">
+     CMU IPC provides flexible, efficient message passing between processes.
+  </description>
+  <author>Reid Simmons</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://www.cs.cmu.edu/~ipc/</url>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib"/>
+  </export>
+</package>
+
+

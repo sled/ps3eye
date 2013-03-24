@@ -1,0 +1,18 @@
+<launch>
+
+  <node pkg="ipc"
+    name="central"
+    type="central"
+    output="screen"
+    args="-su">
+  </node>
+
+  <node pkg="ipc_geometry_msgs"
+    name="example_node"
+    type="geometry_msgs_Twist_subscriber"
+    output="screen">
+    <remap from="~topic" to="/example_topic"/>
+    <param name="message" value="twist"/>
+  </node>
+
+</launch>

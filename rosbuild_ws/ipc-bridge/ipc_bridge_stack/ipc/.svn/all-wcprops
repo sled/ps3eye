@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/wu-ros-pkg/!svn/ver/14/stacks/cmuipc/trunk/ipc
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/wu-ros-pkg/!svn/ver/14/stacks/cmuipc/trunk/ipc/manifest.xml
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/wu-ros-pkg/!svn/ver/14/stacks/cmuipc/trunk/ipc/mainpage.dox
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/wu-ros-pkg/!svn/ver/14/stacks/cmuipc/trunk/ipc/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/wu-ros-pkg/!svn/ver/14/stacks/cmuipc/trunk/ipc/Makefile
+END

@@ -1,0 +1,16 @@
+<stack>
+
+  <description brief="ipc_bridge_stack">ipc</description>
+  <author> 
+           Code was written by Nathan Michael
+           Stack is maintained by Ben Cohen
+  </author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  
+  <depend stack="ros" />
+  <depend stack="common_msgs" /> <!--sensor_msgs, nav_msgs-->
+  <depend stack="geometry"/>     <!--tf-->
+  <depend stack="navigation"/>   <!--move_base_msgs-->
+
+</stack>

@@ -1,0 +1,17 @@
+<package>
+  <description brief="ipc_bridge_example">
+
+     ipc_bridge_example
+
+  </description>
+  <author>Benjamin Cohen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ipc_bridge_example</url>
+
+  <depend package="ipc_bridge_ros"/>
+  <depend package="ipc_bridge_matlab"/>
+
+</package>
+
+

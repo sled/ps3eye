@@ -1,0 +1,41 @@
+%{
+#include <ipc_bridge/msgs/geometry_msgs_Quaternion.h>
+#include <ipc_bridge/msgs/geometry_msgs_Vector3.h>
+%}
+
+ipc_type geometry_msgs_Quaternion;
+ipc_type geometry_msgs_Vector3;
+
+struct geometry_msgs_Transform
+{
+ geometry_msgs_Vector3 translation;
+ geometry_msgs_Quaternion rotation;
+
+%{
+  geometry_msgs_Transform() {}
+  geometry_msgs_Transform(const geometry_msgs_Transform& msg) :
+    translation(msg.translation), rotation(msg.rotation)
+  {
+  }
+  ~geometry_msgs_Transform()
+  {
+  }
+  geometry_msgs_Transform& operator= (const geometry_msgs_Transform& msg)
+  {
+    translation = msg.translation;
+    rotation = msg.rotation;
+
+    return *this;
+  }
+%}        
+};
+
+%{
+namespace ipc_bridge
+{
+    namespace geometry_msgs
+    {
+        typedef geometry_msgs_Transform Transform;
+    }
+}
+%}
