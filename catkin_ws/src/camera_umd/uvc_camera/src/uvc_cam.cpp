@@ -159,28 +159,28 @@ Cam::Cam(const char *_device, mode_t _mode, int _width, int _height, int _fps)
   {
     // the commented labels correspond to the controls in guvcview and uvcdynctrl
 
-    //set_control(V4L2_CID_EXPOSURE_AUTO_NEW, 2);
-    set_control(10094851, 1); // Exposure, Auto Priority
-    set_control(10094849, 1); // Exposure, Auto
-    //set_control(168062321, 0); //Disable video processing
-    //set_control(0x9a9010, 100);
-    //set_control(V4L2_CID_EXPOSURE_ABSOLUTE_NEW, 300);
-    //set_control(V4L2_CID_BRIGHTNESS, 140);
-    //set_control(V4L2_CID_CONTRAST, 40);
-    //set_control(V4L2_CID_WHITE_BALANCE_TEMP_AUTO_OLD, 0);
-    set_control(9963776, 128); //Brightness
-    set_control(9963777, 32); //Contrast
-    set_control(9963788, 1); // White Balance Temperature, Auto
-    set_control(9963802, 5984); // White Balance Temperature
-    set_control(9963800, 2);  // power line frequency to 60 hz
-    set_control(9963795, 200); // Gain
-    set_control(9963803, 224); // Sharpness
-    set_control(9963804, 1); //Backlight Compensation
-    set_control(10094850, 250); // Exposure (Absolute)
-    set_control(168062212, 16); //Focus (absolute)
-    set_control(168062213, 3); //LED1 Mode
-    set_control(168062214, 0); //LED1 Frequency
-    set_control(9963778, 32); // Saturation
+	//set_control(V4L2_CID_EXPOSURE_AUTO_NEW, 2);
+	set_control(9963800, 1); // power line frequency to 60 hz
+	set_control(10094851, 1); // Exposure, Auto Priority
+	set_control(10094849, 1); // Exposure, Auto
+	//set_control(168062321, 0); //Disable video processing
+	//set_control(0x9a9010, 100);
+	//set_control(V4L2_CID_EXPOSURE_ABSOLUTE_NEW, 300);
+	//set_control(V4L2_CID_BRIGHTNESS, 140);
+	//set_control(V4L2_CID_CONTRAST, 40);
+	//set_control(V4L2_CID_WHITE_BALANCE_TEMP_AUTO_OLD, 0);
+	set_control(9963776, 128); //Brightness
+	set_control(9963777, 32); //Contrast
+	set_control(9963788, 1); // White Balance Temperature, Auto
+	set_control(9963802, 5984); // White Balance Temperature
+	set_control(9963795, 200); // Gain
+	set_control(9963803, 224); // Sharpness
+	set_control(9963804, 1); //Backlight Compensation
+	set_control(10094850, 250); // Exposure (Absolute)
+	set_control(168062212, 16); //Focus (absolute)
+	set_control(168062213, 3); //LED1 Mode
+	set_control(168062214, 0); //LED1 Frequency
+	set_control(9963778, 32); // Saturation
   }
   catch (std::runtime_error &ex)
   {
@@ -458,6 +458,7 @@ void Cam::set_control(uint32_t id, int val)
   if (ioctl(fd, VIDIOC_S_CTRL, &c) < 0)
   {
     perror("unable to set control");
+	printf("current value of %d is %d\n", id, c.value);
     throw std::runtime_error("unable to set control");
   }
 }

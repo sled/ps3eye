@@ -50,7 +50,7 @@ find_package(OpenCV REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-   INCLUDE_DIRS include
+#   INCLUDE_DIRS include
 #  LIBRARIES my_stereo_cam
 #  CATKIN_DEPENDS cv_bridge image_transport opencv2 roscpp std_msgs uvc_camera
 #  DEPENDS system_lib
