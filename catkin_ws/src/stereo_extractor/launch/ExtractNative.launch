@@ -1,0 +1,7 @@
+<launch>
+  <node ns="my_stereo_cam" pkg="stereo_extractor" type="stereo_extractor_node" name="stereo_extractor" output="screen">
+    <param name="colored" type="bool" value="false"/>
+    <param name="queue_size" type="int" value="5"/>
+    <param name="output_path" type="string" value="/home/sled/Projects/ps3eye/output"/>
+  </node>
+ </launch>
